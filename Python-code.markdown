@@ -1,4 +1,5 @@
 ### This is data from a bank about it's customers over the course of 6 months
+https://www.kaggle.com/arjunbhasin2013/ccdata
 ### Goal: Use ML in order to launch a targeted marketing ad campaign tailered to specific segments
 ### Want to divide customers into new customers, customers who use credit cards for transactions only, customers who use their cards for loans, and customers who are increasing their credit limit
 
