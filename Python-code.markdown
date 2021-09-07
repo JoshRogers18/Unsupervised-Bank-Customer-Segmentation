@@ -113,10 +113,10 @@ cluster_centers = pd.DataFrame(data = cluster_centers, columns = [df.columns])
 cluster_centers
 ```
 ```
-First Customers cluster (Transactors): Those are customers who pay least amount of intrerest charges and careful with their money, Cluster with lowest balance ($104) and cash advance ($303), Percentage of full payment = 23%
-Second customers cluster (revolvers) who use credit card as a loan (most lucrative sector): highest balance ($5000) and cash advance (~$5000), low purchase frequency, high cash advance frequency (0.5), high cash advance transactions (16) and low percentage of full payment (3%)
-Third customer cluster (VIP/Prime): high credit limit $16K and highest percentage of full payment, target for increase credit limit and increase spending habits
-Fourth customer cluster (low tenure): these are customers with low tenure (7 years), low balance 
+First cluster  : (most lucrative) who use credit card as a loan, customers with the highest balance and cash advance, low percentage of full payment (3%), high cash advance frequency (0.5)
+Second cluster : Those are customers who pay low amount of intrerest charges and are careful with their money since lowest purchase frequency and installments purchases and credit limit
+Third cluster  : Cluster with lowest balance and cash advance
+Fourth cluster : highest credit limit and highest percentage of full payment, target for increase credit limit and increase spending habits since frequent purchases are happening in one-go
 ```
 ```python
 # concatenate the clusters labels to our original dataframe so that each row has an associated cluster they fit into
@@ -164,8 +164,13 @@ plt.show()
 
 ### Recap
 ```
-# Perfromed data vizualizations, fixed missing values
-# Applied kmeans to better understand customer segmentation
-# Plotted histogram distribution of all various clusters
-# Used PCA to convert from out original data into a component space and be able to visualized the different clusters in that way
+- Perfromed data vizualizations, fixed missing values
+- Applied kmeans to better understand customer segmentation
+- Plotted histogram distribution of all various clusters
+- Used PCA to convert from out original data into a component space and be able to visualized the different clusters in that way
+Clusters:
+First cluster  : (most lucrative) who use credit card as a loan, customers with the highest balance and cash advance, low percentage of full payment (3%), high cash advance frequency (0.5)
+Second cluster : Those are customers who pay low amount of intrerest charges and are careful with their money since lowest purchase frequency and installments purchases and credit limit
+Third cluster  : Cluster with lowest balance and cash advance
+Fourth cluster : highest credit limit and highest percentage of full payment, target for increase credit limit and increase spending habits since frequent purchases are happening in one-go
 ```
