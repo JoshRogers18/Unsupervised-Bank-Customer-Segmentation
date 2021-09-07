@@ -2,7 +2,7 @@
 ### Goal: Use ML in order to launch a targeted marketing ad campaign tailered to specific segments
 ### Want to divide customers into new customers, customers who use credit cards for transactions only, customers who use their cards for loans, and customers who are increasing their credit limit
 
-```python:
+```python
 import pandas as pd
 import numpy as np
 import seaborn as sns
@@ -33,14 +33,14 @@ from sklearn.decomposition import PCA
  PRC_FULL_PAYMENT: Percent of full payment paid by user
  TENURE: Tenure of credit card service for user
 ```
-```python:
+```python
 df = pd.read_csv('marketing_data.csv')
 df.head()
 df.info()
 df.describe()
 ```
 ### See how many missing valus there were in the data and impute them with average
-```python:
+```python
 sns.heatmap(df.isnull(), yticklabels= False, cbar = False, cmap = 'Reds')
 df.isnull().sum()
 df.loc[(df.MINIMUM_PAYMENTS.isnull() == True), 'MINIMUM_PAYMENTS'] = df.MINIMUM_PAYMENTS.mean()
@@ -49,11 +49,11 @@ df.loc[(df.CREDIT_LIMIT.isnull() == True), 'CREDIT_LIMIT'] = df.MINIMUM_PAYMENTS
 df.duplicated().sum()
 ```
 ### Remove irrelevant variable
-```python:
+```python
 df.drop('CUST_ID',axis=1, inplace = True)
 ```
 ### KDE demonstrates the probability density at different values in a continuous variable.
-```python:
+```python
 plt.figure(figsize=(10,50))
 for i in range(len(df.columns)):
   plt.subplot(17,1,i+1)
